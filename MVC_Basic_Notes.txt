@@ -1,0 +1,33 @@
+-> main index file : import module in main file as per requirement.
+
+	import  express  from "express";
+	import mongoose from "mongoose";
+	import bodyParser from "body-parser";
+	import dotenv from "dotenv";
+
+-> route import from the routes file
+	app.use("/",route);   //import route
+
+
+->model file:
+	 model ma mongoose import 
+	->export default mongoose.model("Restaurant",restaurantSchema)    //export model
+
+
+
+->routes file: we can use routes using express
+	->import { fetchAllRestaurants } from "../controllers/AllRestaurantController.js";
+
+
+	import express from "express";
+	const route = express.Router();
+
+	->at the end of route file export routes.
+	export default route;
+
+	
+->Controller file:
+	-> first thing is you have to import model in your controller file.
+	->import Restaurant from "../models/getAllRestaurntsModel.js" 
+
+
